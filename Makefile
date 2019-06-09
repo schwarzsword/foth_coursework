@@ -4,7 +4,7 @@ build: clean  forth.asm
 	nasm -felf64 -g forth.asm -o forth.o
 	ld -o forth forth.o
 	chmod +x forth
-	echo "#!/bin/sh\n ./forth" > start
+	echo "#!/bin/sh\n cat dlc.frt - | ./forth" > start
 	chmod +x start
 
 clean: 
